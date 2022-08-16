@@ -1,51 +1,229 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@charset 'utf-8';
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* outline-style: none; */
 }
 
 ul,
 li {
-  list-style: none;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
+	list-style: none;
 }
 
 img {
-  vertical-align: middle;
-  border: 0;
+	vertical-align: middle;
+	border: 0;
+}
+
+a {
+	color: #777;
+	text-decoration: none;
 }
 
 html {
-  font-size: 16px;
+	font-size: 10px;
 }
 
 body {
-  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  letter-spacing: -0.64px;
-  color: #444;
-}
-/* 공통요소 */
-.clearfix::after {
-  content: '';
-  position: relative;
-  display: block;
-  width: 100%;
-  clear: both;
+	font-family: 'Pretendard', 'Malgun Gothic', 'Dotum', 'AppleGothic', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: -0.45px;
+	overflow-x: hidden;
 }
 
-.inner {
+/* 공통영역 */
+.clearfix::after {
+	content: '';
+	position: relative;
+	display: block;
+	clear: both;
+}
+
+.inner{
   position: relative;
   display: block;
-  max-width: 1200px;
+  width: 1600px;
   margin: 0 auto;
+}
+
+/* 전체 */
+.wrap{
+  position: relative;
+  display: block;
+}
+
+/* 헤더 */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 0;
+}
+.header-nav{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-btn{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 35px;
+  height: 14px;
+  background: url('../images/header_btn.svg') no-repeat center;
+  background-size: cover;
+  border: 0;
+  cursor: pointer;
+}
+.menu-btn::after{
+  content: 'Menu';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 22px;
+  line-height: 14px;
+  font-weight: bold;
+  margin-top: 1px;
+}
+
+
+.logo{
+  margin: 0 auto;
+  width: 90px;
+}
+.header-logo{
+  position: relative;
+  display: block;
+  font-size: 0;
+  width: 90px;
+  height: 76px;
+  background: url('../images/logo.svg') no-repeat center;
+  background-size: cover;
+}
+
+.header-sitemap{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 178px;
+}
+
+.header-sitemap::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: url('../images/sitemap-arrow.svg') no-repeat center;
+  background-size: cover;
+}
+
+.sitemap{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 12px 30px 12px 0;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+}
+.sitemap-bar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  animation: gowidth 1s ease-in forwards;
+  animation-delay: 0.2s;
+  overflow: hidden;
+
+}
+.sitemap-bar::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+}
+
+@keyframes gowidth {
+	from {
+		width:0;
+	}
+
+	to {
+		width:100%;
+	}
+}
+
+.sitemap-depth1{
+  position: absolute;
+  margin-top: 15px;
+  padding: 20px 17px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  display: block;
+  border: 2px solid #000;
+}
+.sitemap-depth1 li {}
+.sitemap-depth1 li a {
+  font-size: 15px;
+  line-height: 14px;
+  color: #000;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.sitemap-depth1 li a:last-child{
+  margin-bottom: 0;
+}
+
+
+
+
+/* 비주얼 */
+.visual{
+  position: relative;
+  display: block;
+}
+/* 서비스 */
+.service{
+  position: relative;
+  display: block;
+}
+/* 상품 */
+.product{
+  position: relative;
+  display: block;
+}
+/* 문의 */
+.inquiry{
+  position: relative;
+  display: block;
+}
+/* 푸터 */
+.footer{
+  position: relative;
+  display: block;
 }
