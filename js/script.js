@@ -1,5 +1,27 @@
 $(document).ready(function(){
 
+    let headerOpen = $('.header-btn-open');
+    let headerClose =$('.header-btn-close');
+    let siteMap = $('.sitemap');
+    let siteMapList = $('.sitemap-depth1');
+    let mainHeader = $('.main-header');
+
+    headerOpen.click(function(){
+        headerOpen.addClass('hd-btn-open');
+        headerClose.addClass('hd-btn-close');
+        mainHeader.addClass('main-header-open');
+    })
+    headerClose.click(function(){
+        headerOpen.removeClass('hd-btn-open');
+        headerClose.removeClass('hd-btn-close');
+        mainHeader.removeClass('main-header-open');
+    })
+
+    siteMap.click(function(event){
+        event.preventDefault();
+        siteMapList.stop().slideToggle(200);
+    })
+
 })
 
 window.onload = function(){
