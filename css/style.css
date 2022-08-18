@@ -420,10 +420,33 @@ body {
 
 /* 비주얼 */
 .visual {
+  height: 730px;
   position: relative;
+  overflow: hidden;
+}
+
+.visual-bg{
   display: block;
-  padding: 500px 0;
-  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 135%;
+  display: block;
+  /* padding: 500px 0; */
+  background: url('../images/visualbackground.png') no-repeat center;
+  background-size: cover;
+}
+
+.visual-txt{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 112px;
+  color: #fff;
+  white-space: nowrap;
 }
 
 /* 서비스 */
